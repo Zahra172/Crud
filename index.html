@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+
+</head>
+
+<body>
+
+  <div class="form-floating mb-3 mx-auto mt-5 w-50">
+    <input type="text" class="form-control" id="productName" placeholder="product name">
+    <label for="productName">Product Name</label>
+  </div>
+
+  <div class="form-floating mb-3 mx-auto mt-5 w-50">
+    <input type="number" class="form-control" id="productPrize" placeholder="product prize">
+    <label for="productPrize">Product prize</label>
+  </div>
+
+  <div class="form-floating mb-3 mx-auto mt-5 w-50">
+    <input list="categ" type="text" class="form-control" id="productcategory" placeholder="product category">
+    <label for="productcategory">Product category</label>
+    <datalist id="categ">
+      <option>tv</option>
+      <option>computers</option>
+      <option>laptop</option>
+      <option>mobile</option>
+      <option>electronics</option>
+    </datalist>
+  </div>
+
+  <div class="form-floating mb-3 mx-auto mt-5 w-50 ">
+    <textarea type="text" class="form-control" id="productdescription" placeholder="product description"></textarea>
+    <label for="productdescription">Product description</label>
+  </div>
+
+  <div class="form-floating mb-3 mx-auto mt-5 w-50">
+    <input type="file" class="form-control" id="productimage" placeholder="product image">
+    <label for="productimage">Product image</label>
+  </div>
+
+  <button onclick="addProduct();" class="btn btn-info text-white ms-auto" id="addbtn"> add product</button>
+  <button  onclick="updateProduct();" class="btn btn-warning d-none text-white ms-auto" id="updatebtn"> update product</button>
+
+  <div class="container">
+    <input onkeyup=" searchProduct();" type="search" class="form-control w-75 my-5"
+      placeholder="search by product name.. " id="searchInput">
+    <div class="row py-5" id="cartona">
+      
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
